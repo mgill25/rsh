@@ -8,4 +8,9 @@ A simple shell that I am writing just for fun. Don't use it for serious business
 - Builtins
 - Env
 - No Zombies
+- Background/Foreground
 - Trap Signals
+- Pipes
+- stdout/stdin/stderr input/output redirection
+- Pretty colors
+- History
