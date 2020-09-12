@@ -29,12 +29,15 @@ fn interpret(command_str: &String) {
     let command_split : Vec<&str> = command_str.split(' ').collect();
     // println!("{:?}", command_split);
     let process = command_split[0];
-    println!("we must execute {}", process);
     
     // TODO: Can we directly work with syscalls somehow?
-    let output = Command::new(process)
+    let status = Command::new(process)
                         .arg(command_split[1..].join(" "))
-                        .spawn()
-                        .expect("Failed to execute command");
-    println!("{:?}", output);
+                        .status();
+    match status {
+        Ok(s) => {
+            println!("process exited with {}", s);
+        },
+        Err(error) => println!("error while spawning: {}", error)
+    }
 }
