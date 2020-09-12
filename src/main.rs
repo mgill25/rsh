@@ -1,5 +1,6 @@
 use std::io::{self, Write};
 
+// TODO: pagers not working. test: 'man man'
 struct State {
     username: String,
 }
@@ -59,5 +60,6 @@ fn run(command_str: &String) {
     if command_str.len() == 0 {
         return
     }
-    _run_command(command_str);
+    let output = _run_command(command_str);
+    print!("{}", output);
 }

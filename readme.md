@@ -9,6 +9,7 @@ A simple shell that I am writing just for fun. Don't use it for serious business
 - Env
 - No Zombies
 - Background/Foreground
+- Killing Processes
 - Trap Signals
 - Pipes
 - stdout/stdin/stderr input/output redirection
